@@ -24,7 +24,7 @@ const addComment = async (req, res) => {
     else{
         //change date to date type
 
-        const newDate = DateTime(date)
+        const newDate = new Date(date)
         const newComment = await prisma.comment.create({
             data: {
                 content,
